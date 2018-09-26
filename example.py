@@ -4,7 +4,13 @@ tree = ElementTree.parse('input3.xml')
 root = tree.getroot()
 
 for child_of_root in root:
-    print (child_of_root.tag, child_of_root.attrib)
+    docparams = child_of_root.attrib
+    for subchild in child_of_root.iter('СведНП'):
+        name = subchild.attrib
+        for subsubchild in subchild.iter('СведССЧР')
+            another = subsubchild.attrib
+            result = 
+            print()
 
 #for att in root:
  #   first = att.find('attval').text
