@@ -7,10 +7,12 @@ for child_of_root in root:
     docparams = child_of_root.attrib
     for subchild in child_of_root.iter('СведНП'):
         name = subchild.attrib
-        for subsubchild in subchild.iter('СведССЧР')
-            another = subsubchild.attrib
-            result = 
-            print()
+    for subsubchild in child_of_root.iter('СведССЧР'):
+        another = subsubchild.attrib
+        result = dict(docparams)
+        result.update(name)
+        result.update(another)
+        print(result)
 
 #for att in root:
  #   first = att.find('attval').text
